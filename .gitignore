@@ -1,0 +1,9 @@
+.*
+!/.gitignore
+!/.gitattributes
+/results/*
+/resources/*
+/logs/*
+/config/*.tsv
+/config/*.txt
+/config/*.csv
