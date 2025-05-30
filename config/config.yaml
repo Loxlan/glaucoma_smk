@@ -1,0 +1,18 @@
+participants_tsv: config/participants.tsv          #participants list
+
+##base directory 
+deriv_dir: '/path/to/your/deriv'
+#container
+mrtrix3: 'define you singularity'
+freesurfer: 
+qsiprep: 
+bundle_atlas: '/path/bundles'
+##Freesurfer setup
+fs_setup: "export FS_LICENSE=<license/path> && export SUBJECTS_DIR=<path> &&"
+#request resources
+job_fat:
+    mem_mb: xxx
+    time_min: xx
+    threads: xx
+
+
