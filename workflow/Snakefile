@@ -1,0 +1,31 @@
+import os
+from os.path import join
+from glob import glob
+import pandas as pd
+import numpy as np
+
+configfile: 'config/config.yaml'
+
+# load participants file
+df = pd.read_table(config['participants_tsv']) 
+subjects = df.participant_id.to_list() 
+
+rule all:
+      input:
+            expand('{deriv_dir}/freesurfer/{subject}/scripts/recon-all.done', deriv_dir=config['deriv_dir'], subject=subjects),                                #freeSurfnak.smk
+            expand('{deriv_dir}/tckgen_ACT/{subject}/{subject}_corrected_dwi.mif', deriv_dir=config['deriv_dir'], subject=subjects),                           #tckgen_ACT.smk
+            expand('{deriv_dir}/tckgen_ACT/{subject}/{subject}_corrected_brainmask.mif',deriv_dir=config['deriv_dir'], subject=subjects),
+            expand('{deriv_dir}/tckgen_ACT/{subject}/{subject}_corrected_csfresponse.txt',deriv_dir=config['deriv_dir'], subject=subjects),
+            expand('{deriv_dir}/tckgen_ACT/{subject}/{subject}_corrected_csffod.mif', deriv_dir=config['deriv_dir'], subject=subjects),
+            expand('{deriv_dir}/tckgen_ACT/{subject}/{subject}_corrected_5tt_gmwm-mask.nii.gz', deriv_dir=config['deriv_dir'], subject=subjects),       
+            expand('{deriv_dir}/tckgen_ACT/{subject}/{subject}_corrected_5tt_gmwm-mask_bin.nii',deriv_dir=config['deriv_dir'], subject=subjects),
+            expand('{deriv_dir}/tckgen_ACT/{subject}/{subject}_corrected_5tt_gmwm-mask_bin.mif',deriv_dir=config['deriv_dir'], subject=subjects),
+            expand('{deriv_dir}/tckgen_ACT/{subject}/{subject}_corrected_whole-brain_10M.tck',deriv_dir=config['deriv_dir'], subject=subjects),            
+                   
+
+## Anatomically constrained tracking 
+include: 'rules/freeSurfnak.smk'
+include: 'rules/tckgen_ACT.smk'
+
+
+  
