@@ -1,3 +1,3 @@
-# glaucoma_smk workflow
+# Snakemake workflow
 
 #### Details coming soon!
