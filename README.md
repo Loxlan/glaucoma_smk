@@ -1,4 +1,4 @@
-### Snakemake workflow
+## Snakemake workflow
  Snakemake workflow for anatomically guided tracking 
 
 Inputs:
@@ -9,24 +9,24 @@ Inputs:
 - Singularity containers required:
     - [mrtrix3, freesurfer and qsiprep]
 
-## Software Requirements
+### Software Requirements
 Data should be in BIDs format
 
-## Authors
+### Authors
 Loxlan Kasa @loxlan_kasa
 
-## Usage
-### Step 1: Clone the repository to your local system
-### Step 2: Configure your workflow
+### Usage
+#### Step 1: Clone the repository to your local system
+#### Step 2: Configure your workflow
 Edit the files in the config/ folder accordingly. Adjust config.yml to configure the workflow execution and participants.tsv to specify your subjects.
-### Step 3: Install Snakemake system
+#### Step 3: Install Snakemake system
 Install Snakemake using conda:
 
 ```conda create -c bioconda -c conda-forge -n snakemake snakemake```
 
 For installation details, see the instructions in the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html).
 
-### Step 4: Execute workflow
+#### Step 4: Execute workflow
 Activate the conda environment:
 
 conda activate snakemake
@@ -51,7 +51,7 @@ Then, run:
 ```snakemake --use-singularity --cores 8 --resources mem=32000``` 
 See the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) for further details.
 
-### Step 5: Investigate results
+#### Step 5: Investigate results
 After successful execution, you can create a self-contained interactive HTML report with all results via:
 
 ```snakemake --report report.html```
