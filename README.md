@@ -3,10 +3,10 @@
 
 Inputs:
 - participants.tsv with target subject IDs
-For each target subject:
+- For each target subject:
     - Freesurfer processed data
     - DWI data
-Singularity containers required:
+- Singularity containers required:
     - [mrtrix3, freesurfer and qsiprep]
 
 ## Software Requirements
