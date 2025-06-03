@@ -1,14 +1,13 @@
-# Snakemake workflow
-#### Snakemake workflow for anatomically guided tracking 
+### Snakemake workflow
+ Snakemake workflow for anatomically guided tracking 
 
-###### Inputs:
-
-###### participants.tsv with target subject IDs
-###### For each target subject:
-###### Freesurfer processed data
-###### DWI data
-###### Singularity containers required:
-###### [mrtrix3, freesurfer and qsiprep]
+Inputs:
+- participants.tsv with target subject IDs
+For each target subject:
+    - Freesurfer processed data
+    - DWI data
+Singularity containers required:
+    - [mrtrix3, freesurfer and qsiprep]
 
 ## Software Requirements
 Data should be in BIDs format
