@@ -1,6 +1,6 @@
 ## Snakemake workflow
 Cite:
-Detecting neurodegenerative changes in glaucoma using deep mean kurtosis-curve–corrected tractometry
+- Detecting neurodegenerative changes in glaucoma using deep mean kurtosis-curve–corrected tractometry
 Loxlan W. Kasa, William Schierding, Eryn Kwon, Samantha Holdsworth, Helen V Danesh-Meyer
 medRxiv 2025.06.05.25329075; doi: https://doi.org/10.1101/2025.06.05.25329075
 
