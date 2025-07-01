@@ -1,6 +1,10 @@
 ## Snakemake workflow
- Snakemake workflow for anatomically guided tracking 
+Cite:
+Detecting neurodegenerative changes in glaucoma using deep mean kurtosis-curve–corrected tractometry
+Loxlan W. Kasa, William Schierding, Eryn Kwon, Samantha Holdsworth, Helen V Danesh-Meyer
+medRxiv 2025.06.05.25329075; doi: https://doi.org/10.1101/2025.06.05.25329075
 
+Snakemake workflow for anatomically guided tracking 
 Inputs:
 - participants.tsv with target subject IDs
 - For each target subject:
@@ -55,4 +59,12 @@ See the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/get
 After successful execution, you can create a self-contained interactive HTML report with all results via:
 
 ```snakemake --report report.html```
+
+## Open Data and Software
+This study incooperated open tools and the UKBB, listed below:
+- UKBB
+  https://www.ukbiobank.ac.uk/enable-your-research/about-our-data
+- [Detect](https://github.com/chamberm/Detect.git)
+- [SCILPY](github.com/scilus/scilpy)
+
 
