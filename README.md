@@ -4,7 +4,8 @@ Cite:
 Loxlan W. Kasa, William Schierding, Eryn Kwon, Samantha Holdsworth, Helen V Danesh-Meyer
 medRxiv 2025.06.05.25329075; doi: https://doi.org/10.1101/2025.06.05.25329075
 
-Snakemake workflow for anatomically guided tracking 
+Snakemake workflow for anatomically guided tracking
+
 Inputs:
 - participants.tsv with target subject IDs
 - For each target subject:
